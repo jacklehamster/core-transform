@@ -1,0 +1,10 @@
+{
+  "$schema": "../../schema/schema.json",
+  "secondary": {
+    "type": "load", "path": "secondary-data.json"
+  },
+  "test": {
+    "abc": 1234
+  },
+  "alias": { "type": "ref", "path": "#/test" }
+}

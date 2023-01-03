@@ -1,0 +1,1 @@
+{"version":3,"file":"main.js","mappings":"mBAEAA,WAAWC,QAFK,CAAC,C","sources":["webpack://@dobuki/core-transform/./src/index.ts"],"sourcesContent":["const exports = {};\nexport default exports;\nglobalThis.exports = exports;\n"],"names":["globalThis","exports"],"sourceRoot":""}

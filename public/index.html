@@ -1,0 +1,47 @@
+<html lang="en">
+	<head>
+    <meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="gen/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const div = document.createElement("div");
+        div.style.position = "absolute";
+        div.style.bottom = "0px";
+        div.style.left = "0px";
+        div.style.backgroundColor = "silver";
+        div.style.width = "100vw";
+        div.style.padding = "5px";
+        div.style.margin = "0px";
+        div.style.opacity = ".8";
+        div.style.cursor = "pointer";
+        div.addEventListener("mousedown", () => document.body.removeChild(div));
+        div.innerText = `❌ Exports: ${Object.keys(exports).join(", ")}`;
+        document.body.appendChild(div);
+      });
+    </script>
+    <title>Core Transform Demo</title>
+	</head>
+	<body>
+    <h1>Core Transform</h1>
+    <hr>
+    <p>
+      <select title="sample">
+        <option value="sample-data.json">sample-data.json</option>
+      </select>
+    </p>
+    <p>
+      <textarea id="data" placeholder="mainData" style="width: 500px; height: 400px"></textarea>
+    </p>
+    <script>
+      let mainData;
+      function refreshData(json) {
+        mainData = json;
+        document.getElementById("data").value = JSON.stringify(mainData, null, "   ");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+      });
+    </script>
+	</body>
+</html>
